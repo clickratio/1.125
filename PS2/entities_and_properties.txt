@@ -1,0 +1,134 @@
+/*
+1.
+
+Table 1
+
+Entity 1 `Book`
+Property 1 `Book_ID`
+Property 2 `Title`
+Property 3 `ISBN`
+Property 4 `Language_Code`
+Property 5 `num_pages`
+Property 6 `edition`
+Property 7 `genre`
+Property 8 `Publication_Date`
+Property 9 `Price`
+Property 10 `royalties`
+
+Table 2
+
+Entity 2 `Publisher`
+Property 1 `Publisher_ID`
+Property 2 `Publisher_Name`
+Property 3 `Publisher_Email`
+Property 4 `Publisher_Phone`
+Property 5 `Publisher_Address`
+
+Table 3
+
+Entity 3 `Author`
+Property 1 `Author_ID`
+Property 2 `Author_lName`
+Property 3 `Author_fName`
+Property 4 `Author_Email`
+Property 5 `Author_Phone`
+
+Table 4
+
+Entity 4 `Editor`
+Property 1 `Editor_ID`
+Property 2 `Editor_lName`
+Property 3 `Editor_fName`
+Property 4 `Editor_Email`
+Property 5 `Editor_Phone`
+
+Table 5
+
+Entity 5 `Order`
+Property 1 `Order_ID`
+Property 2 `Order_Price`
+Property 3 `Order_lName`
+Property 4 `Order_fName`
+Property 5 `Order_Address`
+Property 6 `Order_Phone`
+Property 7 `Order_Date`
+
+Table 6
+
+Entity 6 `Customer`
+Property 1 `Customer_Account`
+Property 2 `Customer_lName`
+Property 3 `Customer_fName`
+Property 4 `Customer_Phone`
+Property 5 `Customer_Address`
+Property 6 `Customer_Birthday`
+
+Table 7
+
+Entity 7 `Review`
+Property 1`Review_ID`
+Property 2 `Review_Title`
+Property 3 `Review_Text`
+Property 4 `Review_Score`
+
+Table 8
+
+Entity 8 `BooktoAuthor`
+Property 1 `Book_ID`
+Property 2 `Author_ID`
+
+Table 9
+
+Entity 9 `BooktoEditor`
+Property 1 `Book_ID`
+Property 2 `Editor_ID`
+
+Table 10
+
+Entity 10 `BooktoOrder`
+Property 1 `Book_ID`
+Property 2 `Order_ID`
+
+Table 11
+
+Entity 12 `BooktoReview`
+Property 1 `Book_ID`
+Property 2 `Review_ID`
+
+
+*/
+
+/*
+
+2.
+
+PK 1 `Book ID`
+PK 2 `Publisher_ID`
+PK 3 `Author_ID`
+PK 4 `Editor_ID`
+PK 5 `Order_ID`
+PK 6 `Customer_Account`
+PK 7 `Review_ID`
+
+*/
+
+/*
+
+3.
+
+Table 1, Table 2, 1:1
+Table 1, Table 8, 1:N (Table 1, Table 3, N:N)
+Table 8, Table 3, N:1
+Table 1, Table 9, 1:N (Table 1, Table 4, N:N)
+Table 9, Table 4, N:1
+Table 1, Table 7, 1:N
+
+Table 5, Table 10, 1:N (Table 5, Table 1, N:N)
+Table 10, Table 1, N:1
+Table 5, Table 6, 1:1
+
+Table 6, Table 11, 1:N (Table 6, Table 7, N:N)
+Table 11, Table 7, N:1
+
+
+*/
